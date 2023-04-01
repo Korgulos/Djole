@@ -1,1 +1,16 @@
+//@import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+$primary: rgb(165, 18, 104);
+$secondary: rgb(206, 200, 16);
+$my-color: rgb(11, 160, 23);
+
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  my-color: $my-color,
+);
+
 @import "bootstrap/scss/bootstrap";

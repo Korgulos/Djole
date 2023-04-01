@@ -16,7 +16,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExPlugin({
-      filename: "/index.css",
+      filename: "index.css",
     }),
   ],
 };
