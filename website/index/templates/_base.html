@@ -8,8 +8,43 @@
     <link href="{% static 'bootstrap5/index.css' %}" rel="stylesheet">
   </head>
   <body>
-    {% block content %}
+    {% include '_navbar.html'%}
+    <!-- Sidebar -->
+  <div>
+    <div class="container-fluid">
+      <div class="row flex-nowrap">
+        <div class="col-auto px-1 bg-secondary border border-primary">
+          <div class="d-flex flex-column align-items-center navbar-lite align-items-sm-start px-3 min-vh-100">
+            
+            <ul class="navbar navbar-nav flex-column mb-sm-auto align-items-center align-items-sm-start" id="menu">
+              <li class="nav-item">
+                <br/><br/><br/>
+              </li>
+              <li>
+                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link active px-0 align-middle"><i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline p-1 rounded border border-primary">Books of Old Country</span></a>
+                <ul class="collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                  {% for chapter in chapters %}
+                  <li class="w-100">
+                    <a href="{% url 'detail_chapter' chapter.id %}" class="nav-link text-black px-0"><span class="d-none d-sm-inline">{{ chapter.name }}</span></a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="nav-link active px-0 align-middle"><i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline p-1 rounded border border-primary">Country Newsletter</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Mainview -->
+        <div class="col py-4">
+          <br/><br/>
+          {% block content %}
 
-    {% endblock %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+  </div>
   </body>
 </html>

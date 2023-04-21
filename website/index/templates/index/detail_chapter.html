@@ -1,0 +1,28 @@
+<!-- templates/index.html -->
+
+{% extends '_base.html' %}
+
+{% block content %}
+
+<h3>{{ chapter.name }}</h3>
+<p class="lead">{{ chapter.text }}</p>
+{% if images %}
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        {% for image in images %}
+      <div class="carousel-item active">
+        <img src="{{ image.imageInSett.url }}" class="d-block w-100" alt="...">
+      </div>
+      {% endfor %}
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  {% endif %}
+{% endblock %}

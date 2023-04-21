@@ -2,108 +2,14 @@
 
 {% extends '_base.html' %}
 
+
 {% block content %}
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-md navbar-lite fixed-top border border-primary bg-secondary">
-    <div class="container-fluid">
-      <a class="navbar-brand border rounded border-primary text-primary h5 p-2" href="#">DjoleWS</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav position-absolute center end-0">
-          {% if user.is_authenticated %}
-         
-          <li>
-         <div class="nav-item active dropdown  pe-2">
-            <a href="#" class="nav-link active dropdown-toggle rounded border border-primary" id="dropdownUser1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <span class="d-none d-sm-inline mx-1">Dude named Ben</span>
-              <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle" />
-            </a>
-            <ul class="dropdown-menu bg-secondary border border-primary" aria-labelledby="dropdownUser1">
-              <li>
-                <a class="dropdown-item" href="#">Settings</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">Profile</a>
-              </li>
-              <li>
-                <hr class="dropdown-divider border-primary" />
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">Sign out</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        {% else %}
-        <li class="nav-item">
-            <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">Sign in</a>
-          </li>
-        </ul>
-          
-         {% endif %}
-        
-        
-      </div>
-    </div>
-  </nav>
-  <!-- Sidebar -->
-  <div>
-    <div class="container-fluid">
-      <div class="row flex-nowrap">
-        <div class="col-auto col-md-3 col-xl-2 px-sm-6 px-1 bg-secondary border border-primary">
-          <div class="d-flex flex-column align-items-center navbar-lite align-items-sm-start px-3 min-vh-100">
-            
-            <ul class="navbar navbar-nav flex-column mb-sm-auto align-items-center align-items-sm-start" id="menu">
-              <li class="nav-item">
-                <br/><br/><br/>
-              </li>
-              <li>
-                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link active px-0 align-middle"><i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline p-1 rounded border border-primary">Books of Old Country</span></a>
-                <ul class="collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
-                  <li class="w-100">
-                    <a href="#" class="nav-link text-black px-0"><span class="d-none d-sm-inline">Capter</span> 1</a>
-                  </li>
-                  <li>
-                    <a href="#" class="nav-link text-black px-0"><span class="d-none d-sm-inline">Capter</span> 2</a>
-                  </li>
-                  <li class="w-100">
-                    <a href="#" class="nav-link text-black px-0"><span class="d-none d-sm-inline">Capter</span> 3</a>
-                  </li>
-                  <li>
-                    <a href="#" class="nav-link text-black px-0"><span class="d-none d-sm-inline">Capter</span> 4</a>
-                  </li>
-                  <li class="w-100">
-                    <a href="#" class="nav-link text-black px-0"><span class="d-none d-sm-inline">Capter</span> 5</a>
-                  </li>
-                  <li>
-                    <a href="#" class="nav-link text-black px-0"><span class="d-none d-sm-inline">Capter</span> 6</a>
-                  </li>
-                  <li class="w-100">
-                    <a href="#" class="nav-link text-black px-0"><span class="d-none d-sm-inline">Capter</span> 7</a>
-                  </li>
-                  <li>
-                    <a href="#" class="nav-link text-black px-0"><span class="d-none d-sm-inline">Capter</span> 8</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#" class="nav-link active px-0 align-middle"><i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline p-1 rounded border border-primary">Country Newsletter</span></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- Mainview -->
-        <div class="col py-4">
-          <br/><br/>
-          <h3>Left Sidebar with Submenus</h3>
+
+<h3>Left Sidebar with Submenus</h3>
           <p class="lead">An example 2-level sidebar with collasible menu items. The menu functions like an "accordion" where only a single menu is be open at a time. While the sidebar itself is not toggle-able, it does responsively shrink in width on smaller screens.</p>
           <ul class="list-unstyled">
             <li>
               <h5>Responsive</h5> shrinks in width, hides text labels and collapses to icons only on mobile
             </li>
           </ul>
-        </div>
-      </div>
-    </div>
-  </div>
 {% endblock %}
