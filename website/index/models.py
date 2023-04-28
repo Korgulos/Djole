@@ -31,6 +31,8 @@ class Img(models.Model):
     image = models.ForeignKey(Image, on_delete=models.CASCADE, related_name='img')
     chapter = models.ForeignKey(Chapter, on_delete=models.CASCADE, related_name='img')
     
+    class Meta:
+        unique_together = ('chapter', 'image')
 # Create A User Profile Model
 class Profile(models.Model):
 	user = models.OneToOneField(User, on_delete=models.CASCADE)

@@ -1,10 +1,25 @@
 from django.contrib.auth import authenticate, login, logout
-from django.shortcuts import redirect, render
+from django.shortcuts import get_object_or_404, redirect, render
+from django.urls import reverse_lazy, reverse
 from django.views import View
 from django.conf import settings
 from django.contrib import messages
 from .models import Profile,Chapter,Comment,Image,Img
 from django.contrib.auth.models import User
+
+from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
+from django.contrib.humanize.templatetags.humanize import naturaltime
+from django.shortcuts import get_object_or_404, redirect, render
+from django.urls import reverse
+from django.urls import reverse_lazy
+from django.views.generic import CreateView, UpdateView, DeleteView, ListView, DetailView
+from django.views import View
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.db.models import Q
+from django.db.utils import IntegrityError
+
 
 # Create your views here.
 
@@ -30,7 +45,7 @@ class DetailChapter(View):
     template_name = 'index/detail_chapter.html'
     
     def get(self, request, pk):
-        x = Chapter.objects.get(id=pk)
+        x = get_object_or_404(Chapter, id=pk)
         images = Image.objects.filter(chapter=x)
         comments = Comment.objects.filter(chapter=x).order_by('-created_at')
         text = Chapter.text
@@ -41,6 +56,19 @@ class DetailChapter(View):
             'comments': comments,
             }
         return render(request, self.template_name, context)
+    
+class CommentCreate(View):    
+    
+    def post(self, request, pk):
+        f = get_object_or_404(Chapter, id=pk)
+        comment= Comment(
+            name=request.POST['name'],
+            chapter=f,
+            image=request.POST['image'],
+            text=request.POST['text'],
+        )
+        comment.save()
+        return redirect(reverse('index:detail_chapter',args=[pk]))
 
 def signout_user(request):
 	logout(request)
