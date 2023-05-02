@@ -5,6 +5,7 @@ from django.views import View
 from django.conf import settings
 from django.contrib import messages
 from .models import Profile,Chapter,Comment,Image,Img
+from .forms import CommentForm
 from django.contrib.auth.models import User
 
 from django.http import HttpResponse
@@ -49,11 +50,13 @@ class DetailChapter(View):
         images = Image.objects.filter(chapter=x)
         comments = Comment.objects.filter(chapter=x).order_by('-created_at')
         text = Chapter.text
+        comm = CommentForm
         context = {
             'chapters': Chapter.objects.all(),
             'chapter': x,
             'images': images,
             'comments': comments,
+            'CommentForm': comm,
             }
         return render(request, self.template_name, context)
     
@@ -64,7 +67,7 @@ class CommentCreate(View):
         comment= Comment(
             name=request.POST['name'],
             chapter=f,
-            image=request.POST['image'],
+            image=request.FILES['image'],
             text=request.POST['text'],
         )
         comment.save()

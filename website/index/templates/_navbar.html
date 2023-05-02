@@ -1,7 +1,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-md navbar-lite fixed-top border border-primary bg-secondary">
     <div class="container-fluid">
-      <a class="navbar-brand border rounded border-primary text-primary h5 p-2" href="{% url 'index' %}">DjoleWS</a>
+      <a class="navbar-brand border rounded border-primary text-primary h5 p-2" href="{% url 'index:index' %}">DjoleWS</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav position-absolute center end-0">
@@ -31,7 +31,7 @@
         </li>
         {% else %}
         <li class="nav-item">
-            <a class="nav-link active rounded border border-primary mx-1 pe-2" href="{% url 'signin' %}" tabindex="-1" aria-disabled="true">Sign in</a>
+            <a class="nav-link active rounded border border-primary mx-1 pe-2" href="{% url 'index:signin' %}" tabindex="-1" aria-disabled="true">Sign in</a>
           </li>
         </ul>
           

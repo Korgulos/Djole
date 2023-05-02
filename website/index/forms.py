@@ -15,6 +15,10 @@ class ImageForm(forms.ModelForm):
         
         
 class CommentForm(forms.ModelForm):
+    name = forms.CharField(label="Name", max_length=100, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Name'}))
+    text = forms.CharField(label="Text", max_length=100, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Text'}))
+    image = forms.ImageField(required=False, label="Picture", widget=forms.FileInput(attrs={'class':'form-control text-bg-primary border border-primary', 'placeholder':'Text'}))
     class Meta:
         model = Comment
-        fields = ['name', 'text', 'image', 'chapter'] 
+        fields = ['name', 'text', 'image']
+        

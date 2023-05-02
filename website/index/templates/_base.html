@@ -25,7 +25,7 @@
                 <ul class="collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                   {% for chapter in chapters %}
                   <li class="w-100">
-                    <a href="{% url 'detail_chapter' chapter.id %}" class="nav-link text-black px-0"><span class="d-none d-sm-inline">{{ chapter.name }}</span></a>
+                    <a href="{% url 'index:detail_chapter' chapter.id %}" class="nav-link text-black px-0"><span class="d-none d-sm-inline">{{ chapter.name }}</span></a>
                   </li>
                   {% endfor %}
                 </ul>
