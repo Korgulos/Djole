@@ -54,13 +54,13 @@
       <div id="flush-collapse{{ comment.id }}" class="accordion-collapse collapse" aria-labelledby="flush-heading{{ comment.id }}" data-bs-parent="#accordionFlushExample">
         <div class="accordion-body">
         <div class="row flex-nowrap">
-            <div class="col-auto">
+            <div class="col-{% if comment.image %}8{% else %}auto{% endif %}">
             <strong>{{ comment.text }}</strong>
         </div>
-            <div class="col-6">
-            {% if comment.image %}
+        {% if comment.image %}
+            <div class="col-4">
             <img src="{{ comment.image.url }}" class="img-thumbnail" alt="{{ comment.image }}">
-            {% endif %}
+        {% endif %}
         </div>
     </div>
         </div>
@@ -68,7 +68,7 @@
     </div>
  
   {% endif %}
-  {% endfor %}
+  {% endfor %} 
   {% endif %}</br></br></br></br>
 {% endblock %} 
 

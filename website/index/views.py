@@ -60,14 +60,14 @@ class DetailChapter(View):
             }
         return render(request, self.template_name, context)
     
-class CommentCreate(View):    
-    
+class CommentCreate(View):
+
     def post(self, request, pk):
         f = get_object_or_404(Chapter, id=pk)
         comment= Comment(
             name=request.POST['name'],
             chapter=f,
-            image=request.FILES['image'],
+            image=request.FILES.get('image', None),
             text=request.POST['text'],
         )
         comment.save()
