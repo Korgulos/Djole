@@ -6,3 +6,4 @@ bootstrap_5
 npm-debug.log
 yarn-error.log
 site
+*/db.sqlite3
