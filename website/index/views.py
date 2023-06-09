@@ -41,10 +41,128 @@ class IndexView(View):
         }
         return render(request, 'index/index.html', context)
 
+class OnamaView(View):
+
+    def get(self, request):
+        print(request.get_host())
+        host = request.get_host()
+        islocal = host.find('localhost') >= 0 or host.find('127.0.0.1') >= 0
+        context = {
+            'installed': settings.INSTALLED_APPS,
+            'islocal': islocal,
+            'chapters': Chapter.objects.all(),
+        }
+        return render(request, 'index/onama.html', context)
+
+class MesnazajednicaView(View):
+
+    def get(self, request):
+        print(request.get_host())
+        host = request.get_host()
+        islocal = host.find('localhost') >= 0 or host.find('127.0.0.1') >= 0
+        context = {
+            'installed': settings.INSTALLED_APPS,
+            'islocal': islocal,
+            'chapters': Chapter.objects.all(),
+        }
+        return render(request, 'index/mesnazajednica.html', context)
+
+class LokacijaView(View):
+
+    def get(self, request):
+        print(request.get_host())
+        host = request.get_host()
+        islocal = host.find('localhost') >= 0 or host.find('127.0.0.1') >= 0
+        context = {
+            'installed': settings.INSTALLED_APPS,
+            'islocal': islocal,
+            'chapters': Chapter.objects.all(),
+        }
+        return render(request, 'index/lokacija.html', context)
+
+class IstorijaView(View):
+
+    def get(self, request):
+        print(request.get_host())
+        host = request.get_host()
+        islocal = host.find('localhost') >= 0 or host.find('127.0.0.1') >= 0
+        context = {
+            'installed': settings.INSTALLED_APPS,
+            'islocal': islocal,
+            'chapters': Chapter.objects.all(),
+        }
+        return render(request, 'index/istorija.html', context)
+
+class StanovnistvoView(View):
+
+    def get(self, request):
+        print(request.get_host())
+        host = request.get_host()
+        islocal = host.find('localhost') >= 0 or host.find('127.0.0.1') >= 0
+        context = {
+            'installed': settings.INSTALLED_APPS,
+            'islocal': islocal,
+            'chapters': Chapter.objects.all(),
+        }
+        return render(request, 'index/stanovnistvo.html', context)
+
+class ZeokekrozvremeiprostorView(View):
+
+    def get(self, request):
+        print(request.get_host())
+        host = request.get_host()
+        islocal = host.find('localhost') >= 0 or host.find('127.0.0.1') >= 0
+        context = {
+            'installed': settings.INSTALLED_APPS,
+            'islocal': islocal,
+            'chapters': Chapter.objects.all(),
+        }
+        return render(request, 'index/zeokekrozvremeiprostor.html', context)
+
+class GalerijaView(View):
+
+    def get(self, request):
+        print(request.get_host())
+        host = request.get_host()
+        islocal = host.find('localhost') >= 0 or host.find('127.0.0.1') >= 0
+        context = {
+            'installed': settings.INSTALLED_APPS,
+            'islocal': islocal,
+            'chapters': Chapter.objects.all(),
+        }
+        return render(request, 'index/galerija.html', context)
+
+class ZapratiView(View):
+
+    def get(self, request):
+        print(request.get_host())
+        host = request.get_host()
+        islocal = host.find('localhost') >= 0 or host.find('127.0.0.1') >= 0
+        context = {
+            'installed': settings.INSTALLED_APPS,
+            'islocal': islocal,
+            'chapters': Chapter.objects.all(),
+        }
+        return render(request, 'index/zaprati.html', context)
+
+class UrediknjiguView(View):
+
+    def get(self, request):
+        print(request.get_host())
+        host = request.get_host()
+        islocal = host.find('localhost') >= 0 or host.find('127.0.0.1') >= 0
+        context = {
+            'installed': settings.INSTALLED_APPS,
+            'islocal': islocal,
+            'chapters': Chapter.objects.all(),
+        }
+        return render(request, 'index/urediknjigu.html', context)
+
+
 class DetailChapter(View):
     model = Chapter
     template_name = 'index/detail_chapter.html'
-    
+
     def get(self, request, pk):
         x = get_object_or_404(Chapter, id=pk)
         images = Image.objects.filter(chapter=x)
@@ -59,7 +177,7 @@ class DetailChapter(View):
             'CommentForm': comm,
             }
         return render(request, self.template_name, context)
-    
+
 class CommentCreate(View):
 
     def post(self, request, pk):

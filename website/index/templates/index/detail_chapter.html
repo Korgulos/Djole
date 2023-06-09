@@ -9,7 +9,7 @@
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         {% for image in images %}
-      <div class="carousel-item 
+      <div class="carousel-item
       {% if forloop.counter == 1 %}
       active
       {% endif %}
@@ -41,9 +41,9 @@
   {% if comments %}
 
   {% for comment in comments %}
-  
+
   {% if comment.chapter.id == chapter.id %}
-  
+
   <div class="accordion accordion-flush" id="accordionFlushExample">
     <div class="accordion-item">
       <h2 class="accordion-header" id="flush-heading{{ comment.id }}">
@@ -66,10 +66,10 @@
         </div>
       </div>
     </div>
- 
+
   {% endif %}
-  {% endfor %} 
+  {% endfor %}
   {% endif %}</br></br></br></br>
-{% endblock %} 
+{% endblock %}
 
 </div>

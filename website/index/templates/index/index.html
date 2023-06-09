@@ -1,15 +1,148 @@
 <!-- templates/index.html -->
-
 {% extends '_base.html' %}
 
 
 {% block content %}
+{% load static %}
 
-<h3>Left Sidebar with Submenus</h3>
-          <p class="lead">An example 2-level sidebar with collasible menu items. The menu functions like an "accordion" where only a single menu is be open at a time. While the sidebar itself is not toggle-able, it does responsively shrink in width on smaller screens.</p>
-          <ul class="list-unstyled">
-            <li>
-              <h5>Responsive</h5> shrinks in width, hides text labels and collapses to icons only on mobile
-            </li>
-          </ul>
+<div class="container-fluid p-1 text-center">
+  <h1 class="display-1 border-bottom" style="margin: auto; width:25rem"><strong>З Е О К Е</strong></h1>
+  <h3 class="text-uppercase pt-2">од настанка до нестанка</h3>
+</div>
+<div class="row align-items-center container-fluid">
+  <div class="col-sm-12 col-md-9 col-xl-7 mx-auto container-fluid ps-5 pt-5 pt-1 text-center">
+    <a class="btn btn-outline-dark card" href="{% url 'onama' %}" role="button" style="width:25rem">
+      <div class="row g-0">
+        <div class="col-4">
+          <img src="{% static 'icon/icon90.png' %}" class="img-fluid rounded-start" alt="icon">
+        </div>
+        <div class="col-8">
+          <div class="card-body">
+            <h5 class="card-title text-uppercase">О НАМА</h5>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="col-sm-12 col-md-9 col-xl-7 mx-auto container-fluid ps-5 pt-5 pt-1 text-center">
+    <a class="btn btn-outline-dark card" href="{% url 'urediknjigu' %}" role="button" style="width:25rem">
+      <div class="row g-0">
+        <div class="col-4">
+          <img src="{% static 'icon/icon90.png' %}" class="img-fluid rounded-start" alt="icon">
+        </div>
+        <div class="col-8">
+          <div class="card-body">
+            <h5 class="card-title text-uppercase">уреди књигу</h5>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="col-sm-12 col-md-9 col-xl-7 mx-auto container-fluid ps-5 pt-5 pt-1 text-center">
+    <a class="btn btn-outline-dark card" href="{% url 'stanovnistvo' %}" role="button" style="width:25rem">
+      <div class="row g-0">
+        <div class="col-4">
+          <img src="{% static 'icon/icon90.png' %}" class="img-fluid rounded-start" alt="icon">
+        </div>
+        <div class="col-8">
+          <div class="card-body">
+            <h5 class="card-title text-uppercase">СТАНОВНИСТВО</h5>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="col-sm-12 col-md-9 col-xl-7 mx-auto container-fluid ps-5 pt-5 pt-1 text-center">
+    <a class="btn btn-outline-dark card" href="{% url 'zeokekrozvremeiprostor' %}" role="button" style="width:25rem">
+      <div class="row g-0">
+        <div class="col-4">
+          <img src="{% static 'icon/icon90.png' %}" class="img-fluid rounded-start" alt="icon">
+        </div>
+        <div class="col-8">
+          <div class="card-body">
+            <h5 class="card-title text-uppercase">ЗЕОКЕ КРОЗ ВРЕМЕ И ПРОСТОР</h5>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="col-sm-12 col-md-9 col-xl-7 mx-auto container-fluid ps-5 pt-5 pt-1 text-center">
+    <a class="btn btn-outline-dark card" href="{% url 'galerija' %}" role="button" style="width:25rem">
+      <div class="row g-0">
+        <div class="col-4">
+          <img src="{% static 'icon/icon90.png' %}" class="img-fluid rounded-start" alt="icon">
+        </div>
+        <div class="col-8">
+          <div class="card-body">
+            <h5 class="card-title text-uppercase">ГАЛЕРИЈА</h5>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="col-sm-12 col-md-9 col-xl-7 mx-auto container-fluid ps-5 pt-5 pt-1 text-center">
+    <a class="btn btn-outline-dark card" href="{% url 'mesnazajednica' %}" role="button" style="width:25rem">
+      <div class="row g-0">
+        <div class="col-4">
+          <img src="{% static 'icon/icon90.png' %}" class="img-fluid rounded-start" alt="icon">
+        </div>
+        <div class="col-8">
+          <div class="card-body">
+            <h5 class="card-title text-uppercase">МЕСНА ЗАЈЕДНИЦА</h5>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="col-sm-12 col-md-9 col-xl-7 mx-auto container-fluid ps-5 pt-5 pt-1 text-center">
+    <a class="btn btn-outline-dark card" href="{% url 'lokacija' %}" role="button" style="width:25rem">
+      <div class="row g-0">
+        <div class="col-4">
+          <img src="{% static 'icon/icon90.png' %}" class="img-fluid rounded-start" alt="icon">
+        </div>
+        <div class="col-8">
+          <div class="card-body">
+            <h5 class="card-title text-uppercase">ЛОКАЦИЈА</h5>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="col-sm-12 col-md-9 col-xl-7 mx-auto container-fluid ps-5 pt-5 pt-1 text-center">
+    <a class="btn btn-outline-dark card" href="{% url 'istorija' %}" role="button" style="width:25rem">
+      <div class="row g-0">
+        <div class="col-4">
+          <img src="{% static 'icon/icon90.png' %}" class="img-fluid rounded-start" alt="icon">
+        </div>
+        <div class="col-8">
+          <div class="card-body">
+            <h5 class="card-title text-uppercase">ИСТОРИЈА</h5>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="col-sm-12 col-md-9 col-xl-7 mx-auto container-fluid ps-5 pt-5 pt-1 text-center">
+    <a class="btn btn-outline-dark card" href="#" role="button" style="width:25rem">
+      <div class="row g-0">
+        <div class="col-4">
+          <img src="{% static 'icon/icon90.png' %}" class="img-fluid rounded-start" alt="icon">
+        </div>
+        <div class="col-8">
+          <div class="card-body">
+            <h5 class="card-title text-uppercase">преузми књигу</h5>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="col-sm-12 col-md-9 col-xl-7 offset-9 pt-1">
+    <div class="container-fluid p-3">
+        <a href="{% url 'zaprati' %}" class="btn btn-sm"><img src="{% static 'icon/fb.ico' %}" class="img-fluid rounded-start" alt="Facebook"></a>
+        <a href="{% url 'zaprati' %}" class="btn"><img src="{% static 'icon/ins.ico' %}" class="img-fluid rounded-start" alt="Instagram"></a>
+        <a href="{% url 'zaprati' %}" class="btn"><img src="{% static 'icon/twt.ico' %}" class="img-fluid rounded-start" alt="Twitter"></a>
+      </div>
+  </div>
+</div>
+
 {% endblock %}

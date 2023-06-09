@@ -1,43 +1,16 @@
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-md navbar-lite fixed-top border border-primary bg-secondary">
+
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand border rounded border-primary text-primary h5 p-2" href="{% url 'index:index' %}">DjoleWS</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav position-absolute center end-0">
-          {% if user.is_authenticated %}
-         
-          <li>
-         <div class="nav-item active dropdown  pe-2">
-            <a href="#" class="nav-link active dropdown-toggle rounded border border-primary" id="dropdownUser1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <span class="d-none d-sm-inline mx-1">Dude named Ben</span>
-              <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle" />
-            </a>
-            <ul class="dropdown-menu bg-secondary border border-primary" aria-labelledby="dropdownUser1">
-              <li>
-                <a class="dropdown-item" href="#">Settings</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">Profile</a>
-              </li>
-              <li>
-                <hr class="dropdown-divider border-primary" />
-              </li>
-              <li>
-                <a class="dropdown-item" href="{% url 'signout' %}">Sign out</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        {% else %}
-        <li class="nav-item">
-            <a class="nav-link active rounded border border-primary mx-1 pe-2" href="{% url 'index:signin' %}" tabindex="-1" aria-disabled="true">Sign in</a>
-          </li>
+      <a class="navbar-brand ps-4" href="{% url 'index' %}"><h1></h1></a>
+
+      <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle fs-4" href="#" role="button" data-bs-toggle="dropdown">бирај језик</a>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="#">Englis <i class="flag flag-us"></i></a></li>
+          <li><a class="dropdown-item" href="#">Српски</a></li>
+
         </ul>
-          
-         {% endif %}
-        
-        
       </div>
     </div>
   </nav>
