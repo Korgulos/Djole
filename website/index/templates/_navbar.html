@@ -1,16 +1,37 @@
   <!-- Navbar -->
 
-  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <nav class="navbar navbar-expand-xl navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand ps-4" href="{% url 'index' %}"><h1></h1></a>
-
-      <div class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle fs-4" href="#" role="button" data-bs-toggle="dropdown">бирај језик</a>
-        <ul class="dropdown-menu dropdown-menu-end">
-          <li><a class="dropdown-item" href="#">Englis <i class="flag flag-us"></i></a></li>
-          <li><a class="dropdown-item" href="#">Српски</a></li>
-
+      <a class="navbar-brand text-uppercase fs-2 p-xxl-2 fw-bold" href="{% url 'index' %}">ЗЕОКЕ</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo02">
+        <ul class="navbar-nav p-xxl-4 me-2 me-lg-0">
+          <li class="nav-item">
+            <a class="navbar-brand text-uppercase p-xxl-2 fs-6" aria-current="page" href="{% url 'onama' %}">О НАМА</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand text-uppercase p-xxl-2 fs-6" aria-current="page" href="{% url 'urediknjigu' %}">уреди књигу</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand text-uppercase p-xxl-2 fs-6" aria-current="page" href="stanovnistvo">СТАНОВНИСТВО</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand text-uppercase p-xxl-2 fs-6" aria-current="page" href="zeokekrozvremeiprostor">ЗЕОКЕ КРОЗ ВРЕМЕ И ПРОСТОР</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand text-uppercase p-xxl-2 fs-6" aria-current="page" href="{% url 'gallery:gallery' %}">ГАЛЕРИЈА</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand text-uppercase p-xxl-2 fs-6" aria-current="page" href="{% url 'mesnazajednica' %}">МЕСНА ЗАЈЕДНИЦА</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand text-uppercase p-xxl-2 fs-6" aria-current="page" href="{% url 'lokacija' %}">ЛОКАЦИЈА</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand text-uppercase p-xxl-2 fs-6" aria-current="page" href="{% url 'istorija' %}">ИСТОРИЈА</a>
+          </li>
         </ul>
-      </div>
     </div>
   </nav>

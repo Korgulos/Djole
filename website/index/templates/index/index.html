@@ -1,12 +1,41 @@
 <!-- templates/index.html -->
-{% extends '_base.html' %}
+<html>
+  <head>
+    {% load static %}
+    <title>ЗЕОКЕ</title>
+    <script src="{% static 'bootstrap5/index.js' %}"></script> 
+    <link href="{% static 'bootstrap5/index.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="{% static 'icon/favicon.ico' %}"/>
+    <style>
+      .bcground {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-image: url('{% static 'Kuca.png' %}');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
 
+      
+      </style>
+  </head>
+  <body style="background-color:rgb(255,255,255);">
+  <div class="bcground"> 
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <div class="container-fluid justify-content-end">
+      <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle me-0 fs-4" href="#" role="button" data-bs-toggle="dropdown">бирај језик</a>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="#">Englis <i class="flag flag-us"></i></a></li>
+          <li><a class="dropdown-item" href="#">Српски</a></li>
 
-{% block content %}
-{% load static %}
-
+        </ul>
+      </div>
+    </div>
+  </nav>
 <div class="container-fluid p-1 text-center">
-  <h1 class="display-1 border-bottom" style="margin: auto; width:25rem"><strong>З Е О К Е</strong></h1>
+  <h1 class="display-1 border-bottom fw-bold" style="margin: auto; width:25rem">З Е О К Е</h1>
   <h3 class="text-uppercase pt-2">од настанка до нестанка</h3>
 </div>
 <div class="row align-items-center container-fluid">
@@ -28,7 +57,7 @@
     <a class="btn btn-outline-dark card" href="{% url 'urediknjigu' %}" role="button" style="width:25rem">
       <div class="row g-0">
         <div class="col-4">
-          <img src="{% static 'icon/icon90.png' %}" class="img-fluid rounded-start" alt="icon">
+          <img src="{% static 'icon/knjiga.png' %}" class="img-fluid rounded-start" alt="icon">
         </div>
         <div class="col-8">
           <div class="card-body">
@@ -42,7 +71,7 @@
     <a class="btn btn-outline-dark card" href="{% url 'stanovnistvo' %}" role="button" style="width:25rem">
       <div class="row g-0">
         <div class="col-4">
-          <img src="{% static 'icon/icon90.png' %}" class="img-fluid rounded-start" alt="icon">
+          <img src="{% static 'icon/drvo.png' %}" class="img-fluid rounded-start" alt="icon">
         </div>
         <div class="col-8">
           <div class="card-body">
@@ -56,7 +85,7 @@
     <a class="btn btn-outline-dark card" href="{% url 'zeokekrozvremeiprostor' %}" role="button" style="width:25rem">
       <div class="row g-0">
         <div class="col-4">
-          <img src="{% static 'icon/icon90.png' %}" class="img-fluid rounded-start" alt="icon">
+          <img src="{% static 'icon/tri4.png' %}" class="img-fluid rounded-start" alt="icon">
         </div>
         <div class="col-8">
           <div class="card-body">
@@ -67,7 +96,7 @@
     </a>
   </div>
   <div class="col-sm-12 col-md-9 col-xl-7 mx-auto container-fluid ps-5 pt-5 pt-1 text-center">
-    <a class="btn btn-outline-dark card" href="{% url 'galerija' %}" role="button" style="width:25rem">
+    <a class="btn btn-outline-dark card" href="{% url 'gallery:gallery' %}" role="button" style="width:25rem">
       <div class="row g-0">
         <div class="col-4">
           <img src="{% static 'icon/icon90.png' %}" class="img-fluid rounded-start" alt="icon">
@@ -144,5 +173,15 @@
       </div>
   </div>
 </div>
+</div>
 
-{% endblock %}
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top text-center">
+    <div class="col-md-8 offset-md-4 d-flex align-items-center text-center">
+      <span class="mb-3 mb-md-0 text-center">Зеоке од настанка од нестанка | zeokeorg.@gmail.com</span>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
+

@@ -52,6 +52,7 @@ INSTALLED_APPS = [
 
     # Djole's Applications
     "index.apps.IndexConfig",
+    "gallery.apps.GalleryConfig",
 ]
 
 MIDDLEWARE = [
