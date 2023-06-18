@@ -2,6 +2,8 @@
 <html>
   <head>
     {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ЗЕОКЕ</title>
     <script src="{% static 'bootstrap5/index.js' %}"></script> 
     <link href="{% static 'bootstrap5/index.css' %}" rel="stylesheet">
@@ -9,7 +11,7 @@
     <style>
       .bcground {
         margin: 0;
-        padding: 0;
+        padding: 0 8px;      
         box-sizing: border-box;
         background-image: url('{% static 'Kuca.png' %}');
         background-size: cover;
@@ -20,7 +22,7 @@
       
       </style>
   </head>
-  <body style="background-color:rgb(255,255,255);">
+  <body>
   <div class="bcground"> 
   <nav class="navbar navbar-expand-sm navbar-light bg-light">
     <div class="container-fluid justify-content-end">
@@ -35,7 +37,10 @@
     </div>
   </nav>
 <div class="container-fluid p-1 text-center">
-  <h1 class="display-1 border-bottom fw-bold" style="margin: auto; width:25rem">З Е О К Е</h1>
+  <h1 class="display-1 fw-bold">З Е О К Е</h1>
+  <div class="row">
+    <hr class="col-4 offset-4">
+  </div>
   <h3 class="text-uppercase pt-2">од настанка до нестанка</h3>
 </div>
 <div class="row align-items-center container-fluid">
@@ -43,7 +48,7 @@
     <a class="btn btn-outline-dark card" href="{% url 'onama' %}" role="button" style="width:25rem">
       <div class="row g-0">
         <div class="col-4">
-          <img src="{% static 'icon/icon90.png' %}" class="img-fluid rounded-start" alt="icon">
+          <img src="{% static 'icon/onama.png' %}" class="img-fluid rounded-start" alt="icon">
         </div>
         <div class="col-8">
           <div class="card-body">
@@ -99,7 +104,7 @@
     <a class="btn btn-outline-dark card" href="{% url 'gallery:gallery' %}" role="button" style="width:25rem">
       <div class="row g-0">
         <div class="col-4">
-          <img src="{% static 'icon/icon90.png' %}" class="img-fluid rounded-start" alt="icon">
+          <img src="{% static 'icon/galerija.png' %}" class="img-fluid rounded-start" alt="icon">
         </div>
         <div class="col-8">
           <div class="card-body">
@@ -113,7 +118,7 @@
     <a class="btn btn-outline-dark card" href="{% url 'mesnazajednica' %}" role="button" style="width:25rem">
       <div class="row g-0">
         <div class="col-4">
-          <img src="{% static 'icon/icon90.png' %}" class="img-fluid rounded-start" alt="icon">
+          <img src="{% static 'icon/mesnaz.png' %}" class="img-fluid rounded-start" alt="icon">
         </div>
         <div class="col-8">
           <div class="card-body">
@@ -127,7 +132,7 @@
     <a class="btn btn-outline-dark card" href="{% url 'lokacija' %}" role="button" style="width:25rem">
       <div class="row g-0">
         <div class="col-4">
-          <img src="{% static 'icon/icon90.png' %}" class="img-fluid rounded-start" alt="icon">
+          <img src="{% static 'icon/lokacija.png' %}" class="img-fluid rounded-start" alt="icon">
         </div>
         <div class="col-8">
           <div class="card-body">
@@ -165,14 +170,14 @@
       </div>
     </a>
   </div>
-  <div class="col-sm-12 col-md-9 col-xl-7 offset-9 pt-1">
-    <div class="container-fluid p-3">
-        <a href="{% url 'zaprati' %}" class="btn btn-sm"><img src="{% static 'icon/fb.ico' %}" class="img-fluid rounded-start" alt="Facebook"></a>
-        <a href="{% url 'zaprati' %}" class="btn"><img src="{% static 'icon/ins.ico' %}" class="img-fluid rounded-start" alt="Instagram"></a>
-        <a href="{% url 'zaprati' %}" class="btn"><img src="{% static 'icon/twt.ico' %}" class="img-fluid rounded-start" alt="Twitter"></a>
-      </div>
-  </div>
 </div>
+
+  <div class="d-flex justify-content-end pe-5">
+      <a href="{% url 'zaprati' %}" class="btn"><img src="{% static 'icon/fb.ico' %}" class="rounded-circle img-fluid" alt="Facebook"></a>
+      <a href="{% url 'zaprati' %}" class="btn"><img src="{% static 'icon/ins.ico' %}" class="rounded-circle img-fluid" alt="Instagram"></a>
+      <a href="{% url 'zaprati' %}" class="btn pe-5"><img src="{% static 'icon/twt.ico' %}" class="rounded-circle img-fluid" alt="Twitter"></a>
+    </div>
+
 </div>
 
 <div class="container">

@@ -5,26 +5,46 @@
 
 {% block content %}
 {% load static %}
+{% include '_gallery.html'%}
+
 <div class="container-fluid p-1 text-center">
-  <h1 class="display-1 border-bottom fw-bold text-uppercase" style="margin: auto; width:25rem">КАРТЕ</h1>
+  <h1 class="display-1 fw-bold text-uppercase">КАРТЕ</h1>
+  <div class="row">
+    <hr class="col-4 offset-4">
+  </div>
   <h3 class="text-uppercase pt-2 pb-5">од настанка до нестанка</h3>
 </div>
 
-<!-- Gallery  -->
-<div class="row pt-5">
-
-{% for image in gallery %}
-{% if image.gallery == 'MPS' %}
-<div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 mb-4 mb-lg-0">
-<img
-      src="{{ image.image.url }}"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="{{ image.gallery }}"
-    />
+    <!-- Gallery -->
+    
+    <div class="justify-content-center row m-1">
+      
+      {% for image in gallery %}
+      {% if image.gallery == 'MPS' %}
+  
+  <a class="btn btn-outline-secondary card m-1 p-2 " role="button" 
+  style="width: 320px"
+  data-fancybox="gallery"
+  data-src="{{ image.image.url }}"
+  data-caption="{{ image.image}}"
+  >
+  
+    <div class="card" style="overflow: hidden;  width: 300px;">
+      {% if image.image300 %}
+     <img class="card-img-top p-1" style="object-fit: contain;
+     width: 300px; 
+     height: 300px;" src="{{ image.image300.url }}" />
+     {% endif %}
+    </div>
+    <div class="col-auto">
+      <div class="card-body">
+        <h5 class="card-title text-uppercase">{{ image.name }}</h5>
+      </div>
+    </div>
+  
+  </a>
+  {% endif %}
+  {% endfor %}
   </div>
-{% endif %}
-{% endfor %}
-
-
-
-{% endblock %}
+  {% endblock %}
+  

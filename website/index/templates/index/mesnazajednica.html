@@ -1,20 +1,85 @@
-<!-- templates/index.html -->
-
 {% extends '_base.html' %}
-
-
 {% block content %}
+{% load static %}
+{% include '_gallery.html'%}
 
-<div class="container-fluid p-1 text-center">
-  <h2>ЗЕОКЕ</h2>
-  <h3>МЕСНА ЗАЈЕДНИЦА link</h3>
+
+<div class="container-fluid m-2 text-center">
+<br>
+  <h3>МЕСНА ЗАЈЕДНИЦА</h3>
 </div>
-  <div class="col-sm-12 col-md-6 col-xxl-4 mx-auto container-fluid pt-1 text-end">
-      <div class="container-fluid p-3">
-        <a href="#" class="btn"><h4>МЕСНА ЗАЈЕДНИЦА</h4></a>
-        <p>рад месне заједнице, обавештења</p>
-      </div>
+<br>
+<div class="row">
+  <hr class="col-8 offset-2 border border-secondary border-end-0 border-top-0 border-start-0">
+</div>
+
+<div class="container-fluid p-5 m-2">
+  <h3 class="mb-5 ms-5 ps-5 ">Мали Спасовдан</h3>
+  <div class="row">
+    <div class="col-xl-3 col-12 col-sm-6 pb-5">
+
+
+      <a 
+  style="width: 320px"
+  data-fancybox="gallery"
+  data-src="{% static 'gallery/1Спасовдан.jpg' %}"
+  data-caption="">
+  
+    <div>
+     <img src="{% static 'gallery/1Спасовдан150.jpg' %}" />
+    </div>
+    
+  </a>
+  <div style="display: none;">
+  <a class="btn" role="button" 
+  style="width: 320px"
+  data-fancybox="gallery"
+  data-src="{% static 'gallery/3Спасовдан.jpg' %}"
+  data-caption="">
+  
+    <div>
+     <img src="{% static 'gallery/3Спасовдан150.jpg' %}" />
+    </div>   
+  </a>
+    </div>
+  </div>
+    <div class="col-xl-9 col-12 col-sm-7">
+      <p>Прослављен Мали Спасовдан, заветина села Зеоке. Зеочани иако сад територијално ван
+        атара свог села нису пропустили да 1. јуна 2023. лета Господњег спроведу литије. На прве
+        две фотографије свечари су се окупили испред старог храста, записа у Рајковића крају.
+        Трећа је из насеља Загорка Драговић које већим делом чине пресељени Зеочани.</p>
+    </div>
   </div>
 </div>
+<br>
+<div class="row">
+  <hr class="col-8 offset-2 border border-secondary border-end-0 border-top-0 border-start-0">
+</div>
+<br>
 
 {% endblock %}
+
+<div class="section-top-border text-right">
+  <h3 class="mb-30">Right Aligned</h3>
+  <div class="row">
+    <div class="col-md-9">
+      <p class="text-right">Over time, even the most sophisticated, memory packed computer can begin
+        to run slow if we
+        don’t do something to prevent it. The reason why has less to do with how computers are made
+        and how they age and
+        more to do with the way we use them. You see, all of the daily tasks that we do on our PC
+        from running programs
+        to downloading and deleting software can make our computer sluggish. To keep this from
+        happening, you need to
+        understand the reasons why your PC is getting slower and do something to keep your PC
+        running at its best. You
+        can do this through regular maintenance and PC performance optimization programs</p>
+      <p class="text-right">Before we discuss all of the things that could be affecting your PC’s
+        performance, let’s
+        talk a little about what symptoms</p>
+    </div>
+    <div class="col-md-3">
+      <img src="#" alt="" class="img-fluid">
+    </div>
+  </div>
+</div>

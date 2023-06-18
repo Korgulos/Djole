@@ -3,12 +3,14 @@
 <html>
   <head>
     {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ЗЕОКЕ</title>
     <script src="{% static 'bootstrap5/index.js' %}"></script> 
     <link href="{% static 'bootstrap5/index.css' %}" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="{% static 'icon/favicon.ico' %}"/>
   </head>
-  <body style="background-color:rgb(255,255,255);">
+  <body style="background-color:rgb(255,255,255); padding: 0 15px;">
     {% include '_navbar.html'%}
 
     {% block content %}
