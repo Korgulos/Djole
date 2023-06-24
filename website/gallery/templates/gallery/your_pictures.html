@@ -8,11 +8,11 @@
 {% include '_gallery.html'%}
 
 <div class="container-fluid p-1 text-center">
-  <h1 class="display-1 fw-bold text-uppercase">ВАШЕ СЛИКЕ</h1>
+  <h1 class="fw-bold">ВАШЕ СЛИКЕ</h1>
     <div class="row">
-      <hr class="col-4 offset-4">
-    </div>
-  <h3 class="text-uppercase pt-2 pb-5">од настанка до нестанка</h3>
+    <hr class="col-4 offset-4 border border-1 border-secondary border-end-0 border-top-0 border-start-0">
+  </div>
+  <h5 class="pt-2 pb-5">ОД НАСТАНКА ДО НЕСТАНКА</h5>
 </div>
 
 <!-- Gallery -->
@@ -22,16 +22,16 @@
     {% for image in gallery %}
     {% if image.gallery == 'YOP' %}
 
-      <a class="btn btn-outline-secondary card m-1 p-2 " role="button" 
+      <a class="btn btn-outline-secondary card m-1 p-2 " role="button"
       style="width: 320px"
       data-fancybox="gallery"
       data-src="{{ image.image.url }}"
-      data-caption="{{ image.image}}">
+      data-caption="{{ image.name}}">
 
         <div class="card" style="overflow: hidden;  width: 300px;">
           {% if image.image300 %}
           <img class="card-img-top p-1" style="object-fit: contain;
-          width: 300px; 
+          width: 300px;
           height: 300px;" src="{{ image.image300.url }}"/>
         {% endif %}
         </div>

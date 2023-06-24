@@ -6,15 +6,15 @@
 {% block content %}
 {% load static %}
 <div class="container-fluid p-1 text-center">
-  <h1 class="display-1 fw-bold">ГАЛЕРИЈА</h1>
+  <h1 class="fw-bold">ГАЛЕРИЈА</h1>
   <div class="row">
-    <hr class="col-4 offset-4">
+    <hr class="col-4 offset-4 border border-1 border-secondary border-end-0 border-top-0 border-start-0">
   </div>
-  <h3 class="text-uppercase pt-2 pb-5">од настанка до нестанка</h3>
+  <h5 class="pt-2 pb-5">ОД НАСТАНКА ДО НЕСТАНКА</h5>
 </div>
-<div class="d-grid gap-5 pt-5">  
-  
-  
+<div class="d-grid gap-5 pt-5">
+
+
   <button type="button" onclick="window.location.href='{% url 'gallery:pictures' %}';" class="btn btn-secondary btn-lg btn-block">ФОТОГРАФИЈЕ</button>
 
   <button type="button" onclick="window.location.href='{% url 'gallery:karte' %}';" class="btn btn-secondary btn-lg btn-block">КАРТЕ</button>
@@ -22,7 +22,7 @@
   <button type="button" onclick="window.location.href='{% url 'gallery:video' %}';" class="btn btn-secondary btn-lg btn-block">ФИЛМОВИ</button>
 
   <button type="button" onclick="window.location.href='{% url 'gallery:mojefotografije' %}';" class="btn btn-secondary btn-lg btn-block">ДОДАЈ СВОЈУ ФОТОГРАФИЈУ ЗЕОКА</button>
- 
+
 </div>
 </br></br></br></br>
 </br></br>
