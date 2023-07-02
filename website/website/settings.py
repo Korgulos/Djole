@@ -101,7 +101,7 @@ DATABASES = {
 #         'ENGINE': 'django.db.backends.mysql',
 #         'NAME': 'TestSait$site',
 #         'USER': 'TestSait',
-#         'PASSWORD': '777VoivoD777',
+#         'PASSWORD': '**********',
 #         'HOST': 'TestSait.mysql.pythonanywhere-services.com',
 #     }
 # }
@@ -165,7 +165,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_HOST_USER = "korgulos.inc@gmail.com"
-EMAIL_HOST_PASSWORD = 'lvvfutibnvvwcrxs'
+EMAIL_HOST_PASSWORD = '*************'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
