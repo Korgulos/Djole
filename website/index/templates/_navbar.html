@@ -2,35 +2,35 @@
 
   <nav class="navbar navbar-expand-xl navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand text-uppercase fs-1 p-xxl-2 fw-bold" href="{% url 'index' %}">ЗЕОКЕ</a>
+      <a class="navbar-brand text-uppercase fs-1 p-xxl-2 fw-bold" href="{% url 'index:index' %}">ЗЕОКЕ</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo02">
         <ul class="navbar-nav p-xxl-4 me-lg-0">
           <li class="nav-item p-1 p-xxl-2">
-            <button type="button" onclick="window.location.href='{% url 'onama' %}';" class="btn btn-outline-secondary btn-block p-1" style="width:100%; height:100%;">О НАМА</button>
+            <button type="button" onclick="window.location.href='{% url 'index:onama' %}';" class="btn btn-outline-secondary btn-block p-1" style="width:100%; height:100%;">О НАМА</button>
           </li>
           <li class="nav-item p-1 p-xxl-2">
-            <button type="button" onclick="window.location.href='{% url 'urediknjigu' %}';" class="btn btn-outline-secondary btn-block p-1" style="width:100%; height:100%;">УРЕДИ КЊИГУ</button>
+            <button type="button" onclick="window.location.href='{% url 'index:urediknjigu' %}';" class="btn btn-outline-secondary btn-block p-1" style="width:100%; height:100%;">УРЕДИ КЊИГУ</button>
           </li>
           <li class="nav-item p-1 p-xxl-2">
-            <button type="button" onclick="window.location.href='{% url 'stanovnistvo' %}';" class="btn btn-outline-secondary btn-block p-1" style="width:100%; height:100%;">СТАНОВНИСТВО</button>
+            <button type="button" onclick="window.location.href='{% url 'index:stanovnistvo' %}';" class="btn btn-outline-secondary btn-block p-1" style="width:100%; height:100%;">СТАНОВНИСТВО</button>
           </li>
           <li class="nav-item p-1 p-xxl-2">
-            <button type="button" onclick="window.location.href='{% url 'zeokekrozvremeiprostor' %}';" class="btn btn-outline-secondary btn-block p-1" style="width:100%; height:100%;">ЗЕОКЕ КРОЗ ВРЕМЕ И ПРОСТОР</button>
+            <button type="button" onclick="window.location.href='{% url 'index:zeokekrozvremeiprostor' %}';" class="btn btn-outline-secondary btn-block p-1" style="width:100%; height:100%;">ЗЕОКЕ КРОЗ ВРЕМЕ И ПРОСТОР</button>
           </li>
           <li class="nav-item p-1 p-xxl-2">
             <button type="button" onclick="window.location.href='{% url 'gallery:gallery' %}';" class="btn btn-outline-secondary btn-block p-1" style="width:100%; height:100%;">ГАЛЕРИЈА</button>
           </li>
           <li class="nav-item p-1 p-xxl-2">
-            <button type="button" onclick="window.location.href='{% url 'mesnazajednica' %}';" class="btn btn-outline-secondary btn-block p-1" style="width:100%; height:100%;">МЕСНА ЗАЈЕДНИЦА</button>
+            <button type="button" onclick="window.location.href='{% url 'index:mesnazajednica' %}';" class="btn btn-outline-secondary btn-block p-1" style="width:100%; height:100%;">МЕСНА ЗАЈЕДНИЦА</button>
           </li>
           <li class="nav-item p-1 p-xxl-2">
-            <button type="button" onclick="window.location.href='{% url 'lokacija' %}';" class="btn btn-outline-secondary btn-block p-1" style="width:100%; height:100%;">ЛОКАЦИЈА</button>
+            <button type="button" onclick="window.location.href='{% url 'index:lokacija' %}';" class="btn btn-outline-secondary btn-block p-1" style="width:100%; height:100%;">ЛОКАЦИЈА</button>
           </li>
           <li class="nav-item p-1 p-xxl-2">
-            <button type="button" onclick="window.location.href='{% url 'istorija' %}';" class="btn btn-outline-secondary btn-block p-1" style="width:100%; height:100%;">ИСТОРИЈА</button>
+            <button type="button" onclick="window.location.href='{% url 'index:istorija' %}';" class="btn btn-outline-secondary btn-block p-1" style="width:100%; height:100%;">ИСТОРИЈА</button>
           </li>
         </ul>
     </div>

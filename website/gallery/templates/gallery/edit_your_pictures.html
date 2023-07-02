@@ -1,0 +1,85 @@
+<!-- templates/index.html -->
+
+{% extends '_base.html' %}
+
+
+{% block content %}
+{% load static %}
+{% include '_gallery.html'%}
+
+<div class="container-fluid p-1 text-center">
+  <h1 class="fw-bold">УРЕДИ СЛИКЕ</h1>
+    <div class="row">
+    <hr class="col-4 offset-4 border border-1 border-secondary border-end-0 border-top-0 border-start-0">
+  </div>
+</div>
+
+<!-- Gallery -->
+</br>
+<h3 class="container-fluid p-1 text-center">Галерија корисника за постављање</h3>
+</br>
+  <div class="justify-content-center row m-1">
+
+    {% for image in gallery %}
+    {% if image.gallery == 'YOP' %}
+
+      <div class="card m-1 p-2" style="width: 320px">
+        <div class="card" 
+        style="overflow: hidden;  width: 300px;" 
+        data-fancybox="gallery"
+        data-src="{{ image.image.url }}"
+        data-caption="{{ image.name}}">
+          {% if image.image300 %}
+          <img class="card-img-top p-1" style="object-fit: contain;
+          width: 300px;
+          height: 300px;" src="{{ image.image300.url }}"/>
+        {% endif %}
+        </div>
+        <div class="col-auto">
+          <div class="card-body">
+            <p>
+              <form action="" method="post" id="{{ image.id }}">
+                {% csrf_token %}
+                <input type="hidden" id="id" name="id" value="{{ image.id }}">
+              
+                {% if image.approved %}
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="approved" id="false" value="false">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Није постављено
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="approved" id="true" value="true" checked>
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    Јесте постављено
+                  </label>
+                </div>
+                {% else %}
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="approved" id="false" value="false" checked>
+                  <label class="form-check-label" for="approved1">
+                    Није постављено
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="approved" id="true" value="true">
+                  <label class="form-check-label" for="approved2">
+                    Јесте постављено
+                  </label>
+                </div>
+                {% endif %}
+              </br>
+                <input class="btn btn-secondary me-3" type="submit" value="ПОСТАВИ">
+                <input class="btn btn-secondary ms-3" type="submit" value="ОБРИШИ" onclick="window.location.href='{% url 'gallery:obrisi' image.id %}';return false;">
+                <div class="bg-warning text-danger">{{ imgform.image.errors }}</div>
+              </form>
+            </p>
+          </div>
+        </div>
+
+      </div>
+        {% endif %}
+        {% endfor %}
+  </div>
+{% endblock %}

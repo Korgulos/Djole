@@ -13,9 +13,7 @@ def getImageName(file_location):
     return [path, name]
 
 
-link = getImageName('Radojka i Tine.tif')
-
-#print(link)
+link = getImageName(r'D:\Documents\[webDev]\Djole\website\media\images1080\2023\06\29\ugalj-003_HmzltUx.jpg')
 
 img = Image.open(r'{}'.format(link[0]))
 

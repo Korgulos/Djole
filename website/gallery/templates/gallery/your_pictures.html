@@ -14,13 +14,20 @@
   </div>
   <h5 class="pt-2 pb-5">ОД НАСТАНКА ДО НЕСТАНКА</h5>
 </div>
-
+<div class="container-fluid p-1 pe-5 me-5 text-center">
+  <div class="d-grid gap-5 col-md-8 col-xl-6 mx-auto">
+    <button class="btn btn-secondary text-uppercase fs-2" onclick="window.location.href='{% url 'gallery:dodajfotografije' %}';" type="button">Додај своју фотографију</button>
+  </br>
+  </div>
+</div>
 <!-- Gallery -->
 
   <div class="justify-content-center row m-1">
 
+    
+
     {% for image in gallery %}
-    {% if image.gallery == 'YOP' %}
+    {% if image.gallery == 'YOP' and image.approved %}
 
       <a class="btn btn-outline-secondary card m-1 p-2 " role="button"
       style="width: 320px"

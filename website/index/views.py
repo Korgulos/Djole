@@ -204,10 +204,10 @@ def signin_user(request):
 		if user is not None:
 			login(request, user)
 			messages.success(request, ("You Have Been Logged In!"))
-			return redirect('index')
+			return redirect('index:index')
 		else:
 			messages.success(request, ("There was an error logging in. Please Try Again..."))
-			return redirect('signin')
+			return redirect('index:signin')
 
 	else:
 		return render(request, "signin.html", {})

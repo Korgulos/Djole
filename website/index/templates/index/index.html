@@ -45,7 +45,7 @@
 </div>
 <div class="row align-items-center container-fluid">
   <div class="col-sm-12 col-md-9 col-xl-7 mx-auto container-fluid ps-5 pt-5 pt-1 text-center">
-    <a class="btn btn-outline-dark card" href="{% url 'onama' %}" role="button" style="width:25rem">
+    <a class="btn btn-outline-dark card" href="{% url 'index:onama' %}" role="button" style="width:25rem">
       <div class="row g-0">
         <div class="col-4">
           <img src="{% static 'icon/onama.png' %}" class="img-fluid rounded-start" alt="icon">
@@ -59,7 +59,7 @@
     </a>
   </div>
   <div class="col-sm-12 col-md-9 col-xl-7 mx-auto container-fluid ps-5 pt-5 pt-1 text-center">
-    <a class="btn btn-outline-dark card" href="{% url 'urediknjigu' %}" role="button" style="width:25rem">
+    <a class="btn btn-outline-dark card" href="{% url 'index:urediknjigu' %}" role="button" style="width:25rem">
       <div class="row g-0">
         <div class="col-4">
           <img src="{% static 'icon/knjiga.png' %}" class="img-fluid rounded-start" alt="icon">
@@ -73,7 +73,7 @@
     </a>
   </div>
   <div class="col-sm-12 col-md-9 col-xl-7 mx-auto container-fluid ps-5 pt-5 pt-1 text-center">
-    <a class="btn btn-outline-dark card" href="{% url 'stanovnistvo' %}" role="button" style="width:25rem">
+    <a class="btn btn-outline-dark card" href="{% url 'index:stanovnistvo' %}" role="button" style="width:25rem">
       <div class="row g-0">
         <div class="col-4">
           <img src="{% static 'icon/drvo.png' %}" class="img-fluid rounded-start" alt="icon">
@@ -87,7 +87,7 @@
     </a>
   </div>
   <div class="col-sm-12 col-md-9 col-xl-7 mx-auto container-fluid ps-5 pt-5 pt-1 text-center">
-    <a class="btn btn-outline-dark card" href="{% url 'zeokekrozvremeiprostor' %}" role="button" style="width:25rem">
+    <a class="btn btn-outline-dark card" href="{% url 'index:zeokekrozvremeiprostor' %}" role="button" style="width:25rem">
       <div class="row g-0">
         <div class="col-4">
           <img src="{% static 'icon/tri4.png' %}" class="img-fluid rounded-start" alt="icon">
@@ -115,7 +115,7 @@
     </a>
   </div>
   <div class="col-sm-12 col-md-9 col-xl-7 mx-auto container-fluid ps-5 pt-5 pt-1 text-center">
-    <a class="btn btn-outline-dark card" href="{% url 'mesnazajednica' %}" role="button" style="width:25rem">
+    <a class="btn btn-outline-dark card" href="{% url 'index:mesnazajednica' %}" role="button" style="width:25rem">
       <div class="row g-0">
         <div class="col-4">
           <img src="{% static 'icon/mesnaz.png' %}" class="img-fluid rounded-start" alt="icon">
@@ -129,7 +129,7 @@
     </a>
   </div>
   <div class="col-sm-12 col-md-9 col-xl-7 mx-auto container-fluid ps-5 pt-5 pt-1 text-center">
-    <a class="btn btn-outline-dark card" href="{% url 'lokacija' %}" role="button" style="width:25rem">
+    <a class="btn btn-outline-dark card" href="{% url 'index:lokacija' %}" role="button" style="width:25rem">
       <div class="row g-0">
         <div class="col-4">
           <img src="{% static 'icon/lokacija.png' %}" class="img-fluid rounded-start" alt="icon">
@@ -143,7 +143,7 @@
     </a>
   </div>
   <div class="col-sm-12 col-md-9 col-xl-7 mx-auto container-fluid ps-5 pt-5 pt-1 text-center">
-    <a class="btn btn-outline-dark card" href="{% url 'istorija' %}" role="button" style="width:25rem">
+    <a class="btn btn-outline-dark card" href="{% url 'index:istorija' %}" role="button" style="width:25rem">
       <div class="row g-0">
         <div class="col-4">
           <img src="{% static 'icon/icon90.png' %}" class="img-fluid rounded-start" alt="icon">
@@ -173,9 +173,9 @@
 </div>
 
   <div class="d-flex justify-content-end pe-5">
-      <a href="{% url 'zaprati' %}" class="btn"><img src="{% static 'icon/fb.ico' %}" class="rounded-circle img-fluid" alt="Facebook"></a>
-      <a href="{% url 'zaprati' %}" class="btn"><img src="{% static 'icon/ins.ico' %}" class="rounded-circle img-fluid" alt="Instagram"></a>
-      <a href="{% url 'zaprati' %}" class="btn pe-5"><img src="{% static 'icon/twt.ico' %}" class="rounded-circle img-fluid" alt="Twitter"></a>
+      <a href="{% url 'index:zaprati' %}" class="btn"><img src="{% static 'icon/fb.ico' %}" class="rounded-circle img-fluid" alt="Facebook"></a>
+      <a href="{% url 'index:zaprati' %}" class="btn"><img src="{% static 'icon/ins.ico' %}" class="rounded-circle img-fluid" alt="Instagram"></a>
+      <a href="{% url 'index:zaprati' %}" class="btn pe-5"><img src="{% static 'icon/twt.ico' %}" class="rounded-circle img-fluid" alt="Twitter"></a>
     </div>
 
 </div>
