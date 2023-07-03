@@ -6,5 +6,6 @@ bootstrap_5
 npm-debug.log
 yarn-error.log
 site
+*website/website/settings.py
 */db.sqlite3
 **/__pycache__/

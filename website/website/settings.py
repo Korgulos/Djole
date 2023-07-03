@@ -103,6 +103,9 @@ DATABASES = {
 #         'USER': 'TestSait',
 #         'PASSWORD': '777VoivoD777',
 #         'HOST': 'TestSait.mysql.pythonanywhere-services.com',
+#         'OPTIONS': {
+#                 'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+#     },
 #     }
 # }
 
